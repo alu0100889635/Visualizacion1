@@ -1,0 +1,73 @@
+Año ;Mes ;Puerto ;Cód Arancelario ;Descripción Cód Arancelario ;Operación ;País Origen ;Puerto Origen ;País Destino ;Puerto Destino ;Unidades 
+2020;oct;LA ESTACA (EL HIERRO);0001D;Conductores de camión;Cargadas;ESPAÑA;La Estaca (El Hierro);ESPAÑA;Los Cristianos;65
+2020;oct;LA ESTACA (EL HIERRO);0001D;Conductores de camión;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;La Estaca (El Hierro);92
+2020;oct;LA ESTACA (EL HIERRO);1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;La Estaca (El Hierro);ESPAÑA;Los Cristianos;5629
+2020;oct;LA ESTACA (EL HIERRO);1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;La Estaca (El Hierro);5517
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;La Estaca (El Hierro);92
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;San Sebastian de la Gomera;478
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;Santa Cruz de la Palma;126
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Descargadas;ESPAÑA;La Estaca (El Hierro);ESPAÑA;Los Cristianos;67
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Descargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Los Cristianos;495
+2020;oct;LOS CRISTIANOS;0001D;Conductores de camión;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Los Cristianos;107
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;La Estaca (El Hierro);5517
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;San Sebastian de la Gomera;30367
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Los Cristianos;ESPAÑA;Santa Cruz de la Palma;10191
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;La Estaca (El Hierro);ESPAÑA;Los Cristianos;5468
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Los Cristianos;29424
+2020;oct;LOS CRISTIANOS;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Los Cristianos;10063
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;CADIZ;12
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Los Cristianos;108
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;San Sebastian de la Gomera;1
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Santa Cruz de Tenerife;10
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Descargadas;ESPAÑA;CADIZ;ESPAÑA;Santa Cruz de la Palma;8
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;Santa Cruz de la Palma;126
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Descargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Santa Cruz de la Palma;2
+2020;oct;S/C DE LA PALMA;0001D;Conductores de camión;Descargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;Santa Cruz de la Palma;1
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;ARRECIFE DE LANZAROTE;15
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;CADIZ;33
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;LA LUZ Y LAS PALMAS;23
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Los Cristianos;10062
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;PUERTO DEL ROSARIO (FUERTEVENTURA);8
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;San Sebastian de la Gomera;573
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Santa Cruz de Tenerife;30
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;ARRECIFE DE LANZAROTE;ESPAÑA;Santa Cruz de la Palma;33
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;CADIZ;ESPAÑA;Santa Cruz de la Palma;69
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;Santa Cruz de la Palma;10191
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Santa Cruz de la Palma;677
+2020;oct;S/C DE LA PALMA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;Santa Cruz de la Palma;28
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;AGAETE (G.C.);1080
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;ARRECIFE DE LANZAROTE;2
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;CADIZ;21
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;HUELVA;2
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;LA LUZ Y LAS PALMAS;430
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;MORRO JABLE (FUERTEVENTURA);1
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;Santa Cruz de la Palma;1
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;AGAETE (G.C.);ESPAÑA;Santa Cruz de Tenerife;1137
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;CADIZ;ESPAÑA;Santa Cruz de Tenerife;36
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;HUELVA;ESPAÑA;Santa Cruz de Tenerife;7
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;LA LUZ Y LAS PALMAS;ESPAÑA;Santa Cruz de Tenerife;306
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;MORRO JABLE (FUERTEVENTURA);ESPAÑA;Santa Cruz de Tenerife;2
+2020;oct;S/C DE TENERIFE;0001D;Conductores de camión;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Santa Cruz de Tenerife;10
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;AGAETE (G.C.);30788
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;ARRECIFE DE LANZAROTE;26
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;CADIZ;124
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;HUELVA;724
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;LA LUZ Y LAS PALMAS;13715
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;MORRO JABLE (FUERTEVENTURA);71
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;PUERTO DEL ROSARIO (FUERTEVENTURA);6
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;Santa Cruz de Tenerife;ESPAÑA;Santa Cruz de la Palma;28
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;AGAETE (G.C.);ESPAÑA;Santa Cruz de Tenerife;30935
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;ARRECIFE DE LANZAROTE;ESPAÑA;Santa Cruz de Tenerife;118
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;CADIZ;ESPAÑA;Santa Cruz de Tenerife;195
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;HUELVA;ESPAÑA;Santa Cruz de Tenerife;847
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;LA LUZ Y LAS PALMAS;ESPAÑA;Santa Cruz de Tenerife;14306
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;MORRO JABLE (FUERTEVENTURA);ESPAÑA;Santa Cruz de Tenerife;42
+2020;oct;S/C DE TENERIFE;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;Santa Cruz de Tenerife;30
+2020;oct;S/S DE LA GOMERA;0001D;Conductores de camión;Cargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Los Cristianos;496
+2020;oct;S/S DE LA GOMERA;0001D;Conductores de camión;Cargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Santa Cruz de la Palma;2
+2020;oct;S/S DE LA GOMERA;0001D;Conductores de camión;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;San Sebastian de la Gomera;478
+2020;oct;S/S DE LA GOMERA;0001D;Conductores de camión;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;San Sebastian de la Gomera;1
+2020;oct;S/S DE LA GOMERA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Los Cristianos;29462
+2020;oct;S/S DE LA GOMERA;1;Pasajeros en régimen de transporte;Cargadas;ESPAÑA;San Sebastian de la Gomera;ESPAÑA;Santa Cruz de la Palma;677
+2020;oct;S/S DE LA GOMERA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Los Cristianos;ESPAÑA;San Sebastian de la Gomera;30367
+2020;oct;S/S DE LA GOMERA;1;Pasajeros en régimen de transporte;Descargadas;ESPAÑA;Santa Cruz de la Palma;ESPAÑA;San Sebastian de la Gomera;587

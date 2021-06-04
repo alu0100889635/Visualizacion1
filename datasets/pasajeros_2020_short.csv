@@ -1,0 +1,50 @@
+Año,Mes,Puerto,Cód.Arancelario,Descripción.Cód.Arancelario,Operación,País.Origen,Puerto.Origen,País.Destino,Puerto.Destino,Unidades
+2020,dic,LA ESTACA (EL HIERRO),0001C,Cruceristas en Transito,Tránsito,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,Santa Cruz de Tenerife,501
+2020,dic,LA ESTACA (EL HIERRO),0001D,Conductores de camión,Cargadas,ESPAÑA,La Estaca (El Hierro),ESPAÑA,Los Cristianos,73
+2020,dic,LA ESTACA (EL HIERRO),0001D,Conductores de camión,Descargadas,ESPAÑA,Los Cristianos,ESPAÑA,La Estaca (El Hierro),80
+2020,dic,LA ESTACA (EL HIERRO),1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,La Estaca (El Hierro),ESPAÑA,Los Cristianos,4222
+2020,dic,LA ESTACA (EL HIERRO),1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,Los Cristianos,ESPAÑA,La Estaca (El Hierro),4406
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,La Estaca (El Hierro),80
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,San Sebastian de la Gomera,501
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,Santa Cruz de la Palma,126
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Descargadas,ESPAÑA,La Estaca (El Hierro),ESPAÑA,Los Cristianos,75
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Descargadas,ESPAÑA,San Sebastian de la Gomera,ESPAÑA,Los Cristianos,490
+2020,dic,LOS CRISTIANOS,0001D,Conductores de camión,Descargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Los Cristianos,132
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,La Estaca (El Hierro),4406
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,San Sebastian de la Gomera,25800
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Los Cristianos,ESPAÑA,Santa Cruz de la Palma,9522
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,La Estaca (El Hierro),ESPAÑA,Los Cristianos,4309
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,San Sebastian de la Gomera,ESPAÑA,Los Cristianos,23643
+2020,dic,LOS CRISTIANOS,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Los Cristianos,8089
+2020,dic,S/C DE LA PALMA,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,LA LUZ Y LAS PALMAS,ESPAÑA,LA LUZ Y LAS PALMAS,2922
+2020,dic,S/C DE LA PALMA,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,LA LUZ Y LAS PALMAS,3722
+2020,dic,S/C DE LA PALMA,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,San Sebastian de la Gomera,1083
+2020,dic,S/C DE LA PALMA,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,Santa Cruz de Tenerife,771
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,CADIZ,10
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Los Cristianos,128
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,San Sebastian de la Gomera,2
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Santa Cruz de Tenerife,3
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Descargadas,ESPAÑA,CADIZ,ESPAÑA,Santa Cruz de la Palma,9
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Descargadas,ESPAÑA,Los Cristianos,ESPAÑA,Santa Cruz de la Palma,126
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Descargadas,ESPAÑA,San Sebastian de la Gomera,ESPAÑA,Santa Cruz de la Palma,3
+2020,dic,S/C DE LA PALMA,0001D,Conductores de camión,Descargadas,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,Santa Cruz de la Palma,2
+2020,dic,S/C DE LA PALMA,0001X,Cruceristas Inician/Finalizan Línea,Descargadas,ESPAÑA,LA LUZ Y LAS PALMAS,ESPAÑA,Santa Cruz de la Palma,3
+2020,dic,S/C DE LA PALMA,0001X,Cruceristas Inician/Finalizan Línea,Descargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,LA LUZ Y LAS PALMAS,2
+2020,dic,S/C DE LA PALMA,0001X,Cruceristas Inician/Finalizan Línea,Descargadas,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,Santa Cruz de Tenerife,1
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,ARRECIFE DE LANZAROTE,8
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,CADIZ,15
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,LA LUZ Y LAS PALMAS,37
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Los Cristianos,8031
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,PUERTO DEL ROSARIO (FUERTEVENTURA),7
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,San Sebastian de la Gomera,471
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Cargadas,ESPAÑA,Santa Cruz de la Palma,ESPAÑA,Santa Cruz de Tenerife,26
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,ARRECIFE DE LANZAROTE,ESPAÑA,Santa Cruz de la Palma,30
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,CADIZ,ESPAÑA,Santa Cruz de la Palma,34
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,Los Cristianos,ESPAÑA,Santa Cruz de la Palma,9521
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,San Sebastian de la Gomera,ESPAÑA,Santa Cruz de la Palma,677
+2020,dic,S/C DE LA PALMA,1,Pasajeros en régimen de transporte,Descargadas,ESPAÑA,Santa Cruz de Tenerife,ESPAÑA,Santa Cruz de la Palma,48
+2020,dic,S/C DE TENERIFE,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,ARRECIFE DE LANZAROTE,ESPAÑA,San Sebastian de la Gomera,2452
+2020,dic,S/C DE TENERIFE,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,La Estaca (El Hierro),ESPAÑA,ARRECIFE DE LANZAROTE,27
+2020,dic,S/C DE TENERIFE,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,LA LUZ Y LAS PALMAS,ESPAÑA,LA LUZ Y LAS PALMAS,2422
+2020,dic,S/C DE TENERIFE,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,LA LUZ Y LAS PALMAS,ESPAÑA,Santa Cruz de la Palma,1083
+2020,dic,S/C DE TENERIFE,0001C,Cruceristas en Transito,Tránsito,ESPAÑA,PUERTO DEL ROSARIO (FUERTEVENTURA),ESPAÑA,Santa Cruz de la Palma,2721

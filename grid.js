@@ -34,7 +34,7 @@ objectmapa = json0;
 let scale  = 1;
 //Función de proyección
 let projection = d3.geoMercator()
-    .center([0, 0]) //elegidas las coordenadas para centrar el mapa.
+    .center([-15.749, 28.536]) //elegidas las coordenadas para centrar el mapa.
     .scale(scale); //podemos utilizar un factor de escala
 projection.fitSize([width, height], objectmapa)
 

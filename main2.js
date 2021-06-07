@@ -1,41 +1,40 @@
-let svg = d3.select("svg"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height");
+map = () => {
+  const svg = d3.create('svg').attr('viewBox', [0, 0, width, height]);
 
-// Map and projection
-let path = d3.geoPath();
-let projection = d3.geoMercator()
-  .scale(70)
-  .center([0,20])
-  .translate([width / 2, height / 2]);
+  svg
+    .append('path')
+    .datum(border)
+    .attr('fill', 'white')
+    .attr('stroke', 'black')
+    .attr('d', path);
 
-// Data and color scale
-let data = d3.map();
-let colorScale = d3.scaleThreshold()
-  .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
-  .range(d3.schemeBlues[7]);
+  svg
+    .append('g')
+    .selectAll('path')
+    .data(topojson.feature(es, es.objects[active]).features)
+    .join('path')
+    .attr('fill', 'none')
+    .attr('stroke', 'black')
+    .attr('d', path);
 
-// Load external data and boot
-d3.queue()
-  .defer(d3.json, "datasets/indicadores_poblacion_municipios.geojson")
-  .defer(d3.json, "datasets/grid250Canarias_poblacion.geojson", function(d) { data.set(d["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_TOTAL"], +d["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_MUNICIPIO"]); })
-  .await(ready);
+  svg
+    .append('path')
+    .attr('fill', 'none')
+    .attr('stroke', 'black')
+    .attr('d', projection.getCompositionBorders());
 
-function ready(error, topo) {
+  return svg.node();
+}
 
-  // Draw the map
-  svg.append("g")
-    .selectAll("path")
-    .data(topo.features)
-    .enter()
-    .append("path")
-      // draw each country
-      .attr("d", d3.geoPath()
-        .projection(projection)
-      )
-      // set the color of each country
-      .attr("fill", function (d) {
-        d.properties.indicadores_municipal_TOTAL = data.get(d.id) || 0;
-        return colorScale(d.properties.indicadores_municipal_TOTAL);
-      });
-    }
+border = topojson.mesh(es, es.objects.border)
+
+projection = d3.geoConicConformalSpain().fitSize([width, height], border)
+
+path = d3.geoPath().projection(projection)
+height = 500
+
+es = d3.json('https://unpkg.com/es-atlas@0.5.0/es/municipalities.json')
+
+d3 = require('d3@6', 'd3-composite-projections@1.3')
+
+topojson = require('topojson@3')

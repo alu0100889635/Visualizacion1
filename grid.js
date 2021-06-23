@@ -12,7 +12,10 @@ let svg = d3.select("svg")
   //Se crea un div para la etiqueta flotante.
   let div = d3.select("body").append("div")
       .attr("class", "tooltip")
-      .style("opacity", 0);
+      .style("opacity", 0)
+
+
+
       
 //objectmapa tiene que contener el array de características de los elementos path
 let objectmapa;
@@ -23,7 +26,7 @@ let objectmapa;
   //Se pueden cargar letios ficheros, en este caso se fusionaron los datos y la geometríaf
   //en un único objeto geoJson
 queue()
-  .defer(d3.json, "datasets/prueba.geojson")
+  .defer(d3.json, "datasets/grid250Canarias_poblacion.geojson")
   .await(ready);
 
   //Función de callback cuando se cargan los datos de geometría e indicadores
@@ -71,7 +74,11 @@ u.enter()
           .duration(200)
           .style("opacity", .9);
       div	.html(d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_MUNICIPIO"]+ "<br/>" +
-                d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_TOTAL"])
+                "Total: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_TOTAL"] + "<br/>" +
+                "Hombres: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Hombres"] +  "<br/>" +
+                "Mujeres: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Mujeres"] +  "<br/>" +
+                "Españoles: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Españoles"] + "<br/>" +
+                "Extranjeros: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Extranjeros"]) 
           .style("left", (d3.event.pageX) + "px")
           .style("top", (d3.event.pageY - 28) + "px");
       })
@@ -81,7 +88,12 @@ u.enter()
             .style("opacity", 0);
     })
     .on("click", function(d){
-                    console.log(d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_MUNICIPIO"]);
-                    console.log(d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_TOTAL"])
+                    console.log("Municipio: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_MUNICIPIO"]);
+                    console.log("Total: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_TOTAL"]);
+                    console.log("Hombres: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Hombres"]);
+                    console.log("Mujeres: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Mujeres"]);
+                    console.log("Españoles: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Españoles"]);
+                    console.log("Extranjeros: " + d.properties["PMH_SD_20170101_Indicadores_Descarga ISB-ULL_Extranjeros"]); 
+                    console.log("----------------------------------------------")
                             });
 }

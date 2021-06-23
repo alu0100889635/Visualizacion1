@@ -1,6 +1,6 @@
 import './style.css'
 
-d3.select("body").append("h1").text("Islas Canarias");
+d3.select("body").append("h1").text("Islas Canarias, Granularidad 250m");
 let width = 960, height = 500;
 //Se usa una escala logarítmica para el colorf
 let color = d3.scaleLog()

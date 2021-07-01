@@ -79,7 +79,7 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
   d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
     //const filteredData = data.filter(r => r.Puerto)
-    const units = data.map(r => parseInt(r.Unidades))
+    const units = data.map(r => parseInt(r.Unidades)).filter(units => units <= 50)
     const origins = data.map(r => r.Mes)
     const ports = data.map(r => r["Puerto.Destino"])
     // Add X axis

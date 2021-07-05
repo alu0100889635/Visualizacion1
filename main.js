@@ -63,8 +63,8 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //Diagrama de burbujas
   const margin2 = {top: 10, right: 20, bottom: 30, left: 50},
-    width2 = 900 - margin2.left - margin2.right,
-    height2 = 500 - margin2.top - margin2.bottom;
+    width2 = 500 - margin2.left - margin2.right,
+    height2 = 420 - margin2.top - margin2.bottom;
 
   // append the svg object to the body of the page
   const svg2 = d3.select("#burbujas")
@@ -80,11 +80,14 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
     //const filteredData = data.filter(r => r.Puerto)
     const units = data.map(r => parseInt(r.Unidades)).filter(units => units <= 50)
-    const origins = data.map(r => r.Mes)
+    const months = data.map(r => r.Mes)
     const ports = data.map(r => r["Puerto.Destino"])
+
+    //Sumar las toneladas que han llegado a cada puerto en un mes
+    //const unitsPerPort = data.map(r => r.Puerto)
     // Add X axis
     let x2 = d3.scaleBand()
-      .domain(origins)
+      .domain(months)
       .range([ 0, width2 ]);
     svg2.append("g")
       .attr("transform", "translate(0," + height2 + ")")
@@ -99,7 +102,7 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
     let z2 = d3.scaleBand()
     .domain(ports)
-    .range([0, 40]);
+    .range([4, 40]);
 
     // Add a scale for bubble color
     let myColor = d3.scaleOrdinal()

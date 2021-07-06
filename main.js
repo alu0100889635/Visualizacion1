@@ -60,17 +60,23 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
   });
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
   //Diagrama de burbujas
-  const margin2 = {top: 10, right: 20, bottom: 30, left: 50},
-    width2 = 500 - margin2.left - margin2.right,
-    height2 = 420 - margin2.top - margin2.bottom;
+  const margin2 = {top: 10, right: 20, bottom: 30, left: 250},
+    width2 = 900 - margin2.left - margin2.right,
+    height2 = 500 - margin2.top - margin2.bottom;
 
   // append the svg object to the body of the page
   const svg2 = d3.select("#burbujas")
     .append("svg")
-      .attr("width", width2 + margin2.left + margin2.right)
-      .attr("height", height2 + margin2.top + margin2.bottom)
+      .attr("margin-right", width2 + 150 + margin2.left + margin2.right)
+      .attr("width", width2 + 150 + margin2.left + margin2.right)
+      .attr("height", height2 + 150 + margin2.top + margin2.bottom)
     .append("g")
       .attr("transform",
             "translate(" + margin2.left + "," + margin2.top + ")");
@@ -81,44 +87,49 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     //const filteredData = data.filter(r => r.Puerto)
     const units = data.map(r => parseInt(r.Unidades)).filter(units => units <= 50)
     const months = data.map(r => r.Mes)
-    const ports = data.map(r => r["Puerto.Destino"])
+    const origins = data.map(r => r["Puerto.Origen"])
+    const targets = data.map(r => r["Puerto.Destino"])
 
     //Sumar las toneladas que han llegado a cada puerto en un mes
     //const unitsPerPort = data.map(r => r.Puerto)
     // Add X axis
     let x2 = d3.scaleBand()
-      .domain(months)
+      .domain(targets)
       .range([ 0, width2 ]);
     svg2.append("g")
       .attr("transform", "translate(0," + height2 + ")")
-      .call(d3.axisBottom(x2));
+      .call(d3.axisBottom(x2))
+      .selectAll("text")
+      .attr("transform", "translate(-10,0)rotate(-45)")
+      .style("text-anchor", "end");
 
     // Add Y axis
-    let y2 = d3.scaleLinear()
-      .domain([0, Math.max(...units)])
+    let y2 = d3.scaleBand()
+      .domain(origins)
       .range([ height2, 0]);
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
-    let z2 = d3.scaleBand()
-    .domain(ports)
-    .range([4, 40]);
+    let z2 = d3.scaleLinear()
+    .domain([0, Math.max(...units)])
+    .range([4, 20]);
 
     // Add a scale for bubble color
     let myColor = d3.scaleOrdinal()
-      .domain(["LA ESTACA (EL HIERRO)", "LOS CRISTIANOS", "S/C DE LA PALMA", "S/C DE TENERIFE", "S/S DE LA GOMERA"])
+      .domain(["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"])
+      //.domain(["LA ESTACA (EL HIERRO)", "LOS CRISTIANOS", "S/C DE LA PALMA", "S/C DE TENERIFE", "S/S DE LA GOMERA"])
       .range(d3.schemeSet2);
 
     // Add dots
     svg2.append('g')
       .selectAll("dot")
-      .data(data)
+      .data(data.filter(r => parseInt(r.Unidades) <= 50))
       .enter()
       .append("circle")
-        .attr("cx", function (d) { return x2(d.Mes); } )
-        .attr("cy", function (d) { return y2(parseInt(d.Unidades)); } )
-        .attr("r", function (d) { return z2(d["Puerto.Destino"]); } )
-        .style("fill", function (d) { return myColor(d["Puerto.Destino"]); } )
+        .attr("cx", function (d) { return x2(d["Puerto.Destino"]); } )
+        .attr("cy", function (d) { return y2(d["Puerto.Origen"]); } )
+        .attr("r", function (d) { return z2(parseInt(d.Unidades)); } )
+        .style("fill", function (d) { return myColor(d.Mes); } )
         .style("opacity", "0.7")
         .attr("stroke", "white")
         .style("stroke-width", "2px")
@@ -126,6 +137,11 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
 //Diagrama Sankey
 const units3 = "Widgets";
 

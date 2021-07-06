@@ -1,4 +1,6 @@
 import './style.css';
+import { readCSV } from './toJson';
+const csv=require('csvtojson');
 
 //set the dimensions and margins of the graph
 const margin = {top: 10, right: 30, bottom: 90, left: 40},
@@ -62,6 +64,7 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,6 +72,14 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
   //Diagrama de burbujas
   const margin2 = {top: 10, right: 20, bottom: 30, left: 250},
     width2 = 900 - margin2.left - margin2.right,
+=======
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //Diagrama de burbujas
+  const margin2 = {top: 10, right: 20, bottom: 100, left: 70},
+    width2 = 800 - margin2.left - margin2.right,
+>>>>>>> f5fe9157b8c30ed19cf626062dba8a5d37fbf63b
     height2 = 500 - margin2.top - margin2.bottom;
 
   // append the svg object to the body of the page
@@ -110,8 +121,13 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     svg2.append("g")
       .call(d3.axisLeft(y2));
 
+<<<<<<< HEAD
     let z2 = d3.scaleLinear()
     .domain([0, Math.max(...units)])
+=======
+    let z2 = d3.scaleBand()
+    .domain(units)
+>>>>>>> f5fe9157b8c30ed19cf626062dba8a5d37fbf63b
     .range([4, 20]);
 
     // Add a scale for bubble color
@@ -123,13 +139,21 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     // Add dots
     svg2.append('g')
       .selectAll("dot")
+<<<<<<< HEAD
       .data(data.filter(r => parseInt(r.Unidades) <= 50))
+=======
+      .data(data.filter(units => units <= 50))
+>>>>>>> f5fe9157b8c30ed19cf626062dba8a5d37fbf63b
       .enter()
       .append("circle")
         .attr("cx", function (d) { return x2(d["Puerto.Destino"]); } )
         .attr("cy", function (d) { return y2(d["Puerto.Origen"]); } )
         .attr("r", function (d) { return z2(parseInt(d.Unidades)); } )
+<<<<<<< HEAD
         .style("fill", function (d) { return myColor(d.Mes); } )
+=======
+        .style("fill", function (d) { return myColor(d.Puerto); } )
+>>>>>>> f5fe9157b8c30ed19cf626062dba8a5d37fbf63b
         .style("opacity", "0.7")
         .attr("stroke", "white")
         .style("stroke-width", "2px")
@@ -138,141 +162,110 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
+<<<<<<< HEAD
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
+=======
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+>>>>>>> f5fe9157b8c30ed19cf626062dba8a5d37fbf63b
 //Diagrama Sankey
-const units3 = "Widgets";
 
-// set the dimensions and margins of the graph
-const margin3 = {top: 10, right: 10, bottom: 10, left: 10},
-    width3 = 700 - margin3.left - margin3.right,
-    height3 = 300 - margin3.top - margin3.bottom;
 
-// format constiables
-const formatNumber = d3.format(",.0f"),    // zero decimal places
-    format = function(d) { return formatNumber(d) + " " + units3; },
-    color = d3.scaleOrdinal(d3.schemeCategory10);
+readCSV("datasets/mercancias_short.csv");
+let margin = {top: 10, right: 10, bottom: 10, left: 10},
+    width = 450 - margin.left - margin.right,
+    height = 480 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg3 = d3.select("body").append("svg")
-    .attr("width", width3 + margin3.left + margin3.right)
-    .attr("height", height3 + margin3.top + margin3.bottom)
+let svg = d3.select("#sankey").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform", 
-          "translate(" + margin3.left + "," + margin3.top + ")");
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Color scale used
+let color = d3.scaleOrdinal(d3.schemeCategory20);
 
 // Set the sankey diagram properties
-const sankey = d3.sankey()
+let sankey = d3.sankey()
     .nodeWidth(36)
-    .nodePadding(40)
-    .size([width3, height3]);
-
-const path = sankey.link();
+    .nodePadding(290)
+    .size([width, height]);
 
 // load the data
-d3.csv("datasets/sankey.csv", function(error, data) {
-  
-  //set up graph in same style as original example but empty
-  const graph = {"nodes" : [], "links" : []};
+d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_sankey.json", function(error, graph) {
 
-  data.forEach(function (d) {
-    graph.nodes.push({ "name": d.source });
-    graph.nodes.push({ "name": d.target });
-    graph.links.push({ "source": d.source,
-                       "target": d.target,
-                       "value": +d.value });
-   });
-
-  // return only the distinct / unique nodes
-  graph.nodes = d3.keys(d3.nest()
-    .key(function (d) { return d.name; })
-    .object(graph.nodes));
-
-  // loop through each link replacing the text with its index from node
-  graph.links.forEach(function (d, i) {
-    graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
-    graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
-  });
-
-  // now loop through each nodes to make nodes an array of objects
-  // rather than an array of strings
-  graph.nodes.forEach(function (d, i) {
-    graph.nodes[i] = { "name": d };
-  });
-
+  // Constructs a new Sankey generator with the default settings.
   sankey
       .nodes(graph.nodes)
       .links(graph.links)
-      .layout(32);
+      .layout(1);
 
   // add in the links
-  const link = svg3.append("g").selectAll(".link")
-      .data(graph.links)
-    .enter().append("path")
+  let link = svg.append("g")
+    .selectAll(".link")
+    .data(graph.links)
+    .enter()
+    .append("path")
       .attr("class", "link")
-      .attr("d", path)
+      .attr("d", sankey.link() )
       .style("stroke-width", function(d) { return Math.max(1, d.dy); })
       .sort(function(a, b) { return b.dy - a.dy; });
 
-  // add the link titles
-  link.append("title")
-        .text(function(d) {
-    		return d.source.name + " → " + 
-                d.target.name + "\n" + format(d.value); });
-
   // add in the nodes
-  const node = svg3.append("g").selectAll(".node")
-      .data(graph.nodes)
+  let node = svg.append("g")
+    .selectAll(".node")
+    .data(graph.nodes)
     .enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { 
-		  return "translate(" + d.x + "," + d.y + ")"; })
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
       .call(d3.drag()
-        .subject(function(d) {
-          return d;
-        })
-        .on("start", function() {
-          this.parentNode.appendChild(this);
-        })
+        .subject(function(d) { return d; })
+        .on("start", function() { this.parentNode.appendChild(this); })
         .on("drag", dragmove));
 
   // add the rectangles for the nodes
-  node.append("rect")
+  node
+    .append("rect")
       .attr("height", function(d) { return d.dy; })
       .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) { 
-		  return d.color = color(d.name.replace(/ .*/, "")); })
-      .style("stroke", function(d) { 
-		  return d3.rgb(d.color).darker(2); })
+      .style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
+      .style("stroke", function(d) { return d3.rgb(d.color).darker(2); })
+    // Add hover text
     .append("title")
-      .text(function(d) { 
-		  return d.name + "\n" + format(d.value); });
+      .text(function(d) { return d.name + "\n" + "There is " + d.value + " stuff in this node"; });
 
   // add in the title for the nodes
-  node.append("text")
-      .attr("x", -6)
-      .attr("y", function(d) { return d.dy / 2; })
-      .attr("dy", ".35em")
-      .attr("text-anchor", "end")
-      .attr("transform", null)
-      .text(function(d) { return d.name; })
-    .filter(function(d) { return d.x < width3 / 2; })
-      .attr("x", 6 + sankey.nodeWidth())
-      .attr("text-anchor", "start");
+    node
+      .append("text")
+        .attr("x", -6)
+        .attr("y", function(d) { return d.dy / 2; })
+        .attr("dy", ".35em")
+        .attr("text-anchor", "end")
+        .attr("transform", null)
+        .text(function(d) { return d.name; })
+      .filter(function(d) { return d.x < width / 2; })
+        .attr("x", 6 + sankey.nodeWidth())
+        .attr("text-anchor", "start");
 
   // the function for moving the nodes
   function dragmove(d) {
     d3.select(this)
-      .attr("transform", 
-            "translate(" 
-               + d.x + "," 
+      .attr("transform",
+            "translate("
+               + d.x + ","
                + (d.y = Math.max(
-                  0, Math.min(height3 - d.dy, d3.event.y))
+                  0, Math.min(height - d.dy, d3.event.y))
                  ) + ")");
     sankey.relayout();
-    link.attr("d", path);
+    link.attr("d", sankey.link() );
   }
+
 });
 

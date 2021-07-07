@@ -116,9 +116,41 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
 
     // Add a scale for bubble color
     let myColor = d3.scaleOrdinal()
-      .domain(["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"])
-      //.domain(["LA ESTACA (EL HIERRO)", "LOS CRISTIANOS", "S/C DE LA PALMA", "S/C DE TENERIFE", "S/S DE LA GOMERA"])
+      //.domain(["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"])
+      .domain(["LA ESTACA (EL HIERRO)", "LOS CRISTIANOS", "S/C DE LA PALMA", "S/C DE TENERIFE", "S/S DE LA GOMERA"])
       .range(d3.schemeSet2);
+
+    let tooltip = d3.select("#burbujas")
+    .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("background-color", "black")
+      .style("border-radius", "5px")
+      .style("padding", "10px")
+      .style("color", "white")
+  
+      // -2- Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
+    let showTooltip = function(d) {
+      tooltip
+        .transition()
+        .duration(200)
+      tooltip
+        .style("opacity", 1)
+        .html("Puerto: " + d.Puerto)
+        .style("left", (d3.mouse(this)[0]+30) + "px")
+        .style("top", (d3.mouse(this)[1]+30) + "px")
+    }
+    let moveTooltip = function(d) {
+      tooltip
+        .style("left", (d3.mouse(this)[0]+30) + "px")
+        .style("top", (d3.mouse(this)[1]+30) + "px")
+    }
+    let hideTooltip = function(d) {
+      tooltip
+        .transition()
+        .duration(200)
+        .style("opacity", 0)
+    }
 
     // Add dots
     svg2.append('g')
@@ -126,13 +158,17 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
       .data(data.filter(r => parseInt(r.Unidades) <= 50))
       .enter()
       .append("circle")
+        .attr("class", "bubbles")
         .attr("cx", function (d) { return x2(d["Puerto.Destino"]); } )
         .attr("cy", function (d) { return y2(d["Puerto.Origen"]); } )
         .attr("r", function (d) { return z2(parseInt(d.Unidades)); } )
-        .style("fill", function (d) { return myColor(d.Mes); } )
+        .style("fill", function (d) { return myColor(d.Puerto); } )
         .style("opacity", "0.7")
         .attr("stroke", "white")
         .style("stroke-width", "2px")
+      .on("mouseover", showTooltip )
+      .on("mousemove", moveTooltip )
+      .on("mouseleave", hideTooltip )
 
     });
 

@@ -34,3 +34,11 @@ body {
 .link:hover {
   stroke-opacity: .5;
 }
+
+.bubbles {
+  stroke-width: 2px;
+  stroke: white;
+}
+.bubbles:hover {
+  stroke: black;
+}

@@ -124,7 +124,7 @@ d3.csv("datasets/pasajeros_2020.csv", function(data) {
     .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
-      .style("background-color", "black")
+      .style("background-color", "grey")
       .style("border-radius", "5px")
       .style("padding", "10px")
       .style("color", "white")
